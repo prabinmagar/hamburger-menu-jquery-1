@@ -1,0 +1,188 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+/*** header ***/
+
+header{
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("header-banner.jpg") center/cover no-repeat fixed;
+    min-height: 100vh;
+}
+
+.header-container{
+    width: 95vw;
+    margin: 0 auto;
+}
+
+/*** title and menu ****/
+
+.title-and-menu{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.title h1{
+    text-shadow: 0 0 4px #909090;
+}
+
+.menu .fas{
+    font-size: 2rem;
+}
+
+.menu span:last-of-type{
+    display: none;
+}
+
+/*** nav bar ***/
+
+.nav-bar{
+    background: rgba(255, 255, 255, 0.6);
+    padding-left: 30px;
+    box-shadow: 0 2px 6px #0f0f0f;
+}
+
+
+/* jQuery part */
+
+.nav-bar ul{
+    display: none;
+}
+
+.nav-bar ul li{
+    padding: 10px 0;
+    transition: padding-left 1s ease;
+}
+
+.nav-bar ul li:hover{
+    padding-left: 20px;
+}
+
+.nav-bar ul li a{
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    opacity: 0.7;
+    transition: opacity 1s ease;
+}
+
+.nav-bar ul li:hover a{
+    opacity: 0.5;
+}
+
+
+/****** banner container ***/
+
+.banner-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 78.4px);
+    text-align: center;
+}
+
+.banner-container h1{
+    font-size: 4.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1.3rem;
+    padding: 10px 0;
+}
+
+.banner-container h2{
+    font-size: 18px;
+    font-weight: 300;
+    padding: 10px 0;
+    margin-bottom: 30px;
+}
+
+.banner-container button{
+    display: block;
+    border: 3px solid #fff;
+    background: rgba(0, 0, 0, 0.2);
+    width: 200px;
+    font-size: 17px;
+    color: #fff;
+    margin: 10px;
+    border-radius: 2px;
+    cursor: pointer;
+    padding: 15px 0;
+}
+
+.banner-container button:hover{
+    background: transparent;
+}
+
+@media(max-width: 500px){
+    .banner-container h1{
+        font-size: 1.6rem;
+    }
+}
+
+@media(min-width: 678px){
+    .menu{
+        display: none;
+    }
+
+    .header-container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #links{
+        display: flex!important;
+    }
+
+    .title-and-menu{
+        flex: 0 0 30%;
+    }
+    .nav-bar{
+        flex: 1 1 auto;
+        align-self: center;
+        background: transparent;
+        box-shadow: none;
+        padding-left: 0;
+    }
+
+    .nav-bar ul{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .nav-bar ul li{
+        padding: 0 10px;
+    }
+
+    .nav-bar ul li:hover{
+        padding-left: 10px;
+    }
+
+    .nav-bar ul li:hover a{
+        opacity: 1;
+        text-decoration: underline;
+    }
+
+    .nav-bar ul li a{
+        color: #fff;
+        opacity: 1;
+        text-shadow: 0 0 2px #909090;
+    }
+}
